@@ -16,7 +16,8 @@
     <activity
         android:name=".RegisterActivity"
         android:exported="false"
-        android:parentActivityName=".LoginActivity"/>
+        android:parentActivityName=".LoginActivity"
+        android:theme="@style/login_NoActionBar"/>
     <activity
         android:name=".LoginActivity"
         android:exported="true"

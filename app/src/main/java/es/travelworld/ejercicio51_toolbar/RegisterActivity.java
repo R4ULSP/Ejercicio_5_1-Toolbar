@@ -2,6 +2,8 @@ package es.travelworld.ejercicio51_toolbar;
 
 import static es.travelworld.ejercicio51_toolbar.tools.References.KEY_USER;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -35,14 +37,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         user = (User)getIntent().getSerializableExtra(KEY_USER);
 
-        setActionBarSettings();
+        setToolbarSettings();
         populateAgeEditText();
         setListeners();
     }
 
-    private void setActionBarSettings() {
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+    private void setToolbarSettings() {
+        setSupportActionBar(binding.toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(getString(R.string.register_title));
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
     }
 
     private void setListeners() {

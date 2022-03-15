@@ -23,7 +23,7 @@ public class HomeActivity extends AppCompatActivity {
 
         user = (User)getIntent().getSerializableExtra(KEY_USER);
 
-        setActionBarSettings();
+        //setActionBarSettings();
 
         Log.i("---Datos usuario","Nombre: " + user.getName() + "\nApellidos: " + user.getLastname() + "\nEdad:" + user.getAgeGroup());
     }
@@ -33,5 +33,6 @@ public class HomeActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(getString(R.string.home_title));
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ac_menu);
+
     }
 }

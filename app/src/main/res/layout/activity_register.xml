@@ -7,6 +7,17 @@
     android:background="@color/teal_100"
     tools:context=".RegisterActivity">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/register_title"
+        android:background="?colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@color/white"
+        android:fitsSystemWindows="true" />
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/register_avatar_img"
         android:layout_width="wrap_content"
@@ -15,7 +26,7 @@
         app:srcCompat="@drawable/img_registro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/register_avatar_img_selector"
