@@ -11,12 +11,13 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/register_title"
         android:background="?colorPrimary"
+        android:fitsSystemWindows="true"
         android:minHeight="?attr/actionBarSize"
-        app:titleTextColor="@color/white"
-        android:fitsSystemWindows="true" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ac_arrow_back"
+        app:title="@string/register_title"
+        app:titleTextColor="@color/white" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/register_avatar_img"

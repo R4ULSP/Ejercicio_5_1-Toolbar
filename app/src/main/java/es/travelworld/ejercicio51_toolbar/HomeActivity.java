@@ -1,9 +1,18 @@
 package es.travelworld.ejercicio51_toolbar;
 
 import static es.travelworld.ejercicio51_toolbar.tools.References.KEY_USER;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.Objects;
 
@@ -21,18 +30,31 @@ public class HomeActivity extends AppCompatActivity {
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        user = (User)getIntent().getSerializableExtra(KEY_USER);
+        setSupportActionBar(binding.toolbar);
 
         //setActionBarSettings();
 
-        Log.i("---Datos usuario","Nombre: " + user.getName() + "\nApellidos: " + user.getLastname() + "\nEdad:" + user.getAgeGroup());
+    //    Log.i("---Datos usuario","Nombre: " + user.getName() + "\nApellidos: " + user.getLastname() + "\nEdad:" + user.getAgeGroup());
     }
 
-    private void setActionBarSettings() {
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(getString(R.string.home_title));
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ac_menu);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        if (item.getItemId() == R.id.eurodisney) {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.disneylandparis.com/es-es/"));
+            startActivity(intent);
+        }
 
+        if (item.getItemId() == R.id.rentacar) {
+            Toast.makeText(this, "icono en toolbar pulsado", Toast.LENGTH_SHORT).show();
+            return true;
+            /* TODO: PONER FRAGMENT */
+        }
+        return super.onOptionsItemSelected(item);
     }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.home_menu_toolbar, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
 }

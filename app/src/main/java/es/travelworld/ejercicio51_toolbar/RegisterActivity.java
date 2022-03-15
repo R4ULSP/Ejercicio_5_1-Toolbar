@@ -37,17 +37,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         user = (User)getIntent().getSerializableExtra(KEY_USER);
 
-        setToolbarSettings();
+        setSupportActionBar(binding.toolbar);
         populateAgeEditText();
         setListeners();
     }
 
-    private void setToolbarSettings() {
-        setSupportActionBar(binding.toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(getString(R.string.register_title));
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-    }
 
     private void setListeners() {
         binding.registerAvatarImgSelector.setOnClickListener(this);
