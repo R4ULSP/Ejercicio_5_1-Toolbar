@@ -35,10 +35,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         setListeners();
         user = new User();
-
-        Intent intent = new Intent(this, HomeActivity.class);
-        intent.putExtra(KEY_USER, user);
-        startActivity(intent);
     }
 
     private void setListeners() {

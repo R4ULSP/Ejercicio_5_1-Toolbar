@@ -2,8 +2,6 @@ package es.travelworld.ejercicio51_toolbar;
 
 import static es.travelworld.ejercicio51_toolbar.tools.References.KEY_USER;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;

@@ -22,3 +22,5 @@ t
 Dapp/src/main/java/es/travelworld/ejercicio51_toolbar/tools/User.java,7\c\7c107b2c9142e7777a9d0c90754b7797cda6381e
 z
 Japp/src/main/java/es/travelworld/ejercicio51_toolbar/tools/References.java,7\d\7d5460c66493bce3e4c45c190887b63cc8444b07
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
